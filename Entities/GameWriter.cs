@@ -2,13 +2,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GameStore.Entities
 {
-    public class GamePublisher
+    public class GameWriter
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        public int GameId { get; set; }
+        public int GameID { get; set; }
         public Game Game { get; set; }
-        public int PublishedId { get; set; }
-        public Publisher Publisher { get; set; }
+        public int WriterID { get; set; }
+        public Writer Writer { get; set; }
     }
 }

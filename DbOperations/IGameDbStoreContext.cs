@@ -10,8 +10,10 @@ namespace GameStore.DbOperations
         public DbSet<GameDeveloper> GameDevelopers { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<GameGenre> GameGenres { get; set; }
-        public DbSet<Publisher> Publishers { get; set; }
-        public DbSet<Game> GamePublishers { get; set; }
+        public DbSet<GameWriter> GameWriters { get; set; }
+        public DbSet<Writer> Writers { get; set; }
+        // public DbSet<Publisher> Publishers { get; set; }
+        // public DbSet<GamePublisher> GamePublishers { get; set; }
         int SaveChanges();
     }
 }
