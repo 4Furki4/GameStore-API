@@ -19,7 +19,6 @@ namespace GameStore.Application.GameOperations.Query.GetBooks
             var game = dbContext.Games.Include(x=>x.GameWriters).ThenInclude(w=>w.Writer)
             .Include(x=>x.GameDevelopers).ThenInclude(x=>x.Developer)
             .Include(x=>x.GameGenres).ThenInclude(x=>x.Genre)
-            .Include(x=>x.GamePublisher).ThenInclude(x=>x.Publisher)
             .OrderBy(x=>x.ID).ToList();
             // var game = dbContext.Games
             // .Include(x=>x.GamePublishers).ThenInclude(x=>x.Publisher)

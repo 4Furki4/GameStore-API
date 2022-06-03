@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {}
+    "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {
+    "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
+        "projectUniqueName": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
         "projectName": "GameStore",
-        "projectPath": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
+        "projectPath": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
         "packagesPath": "C:\\Users\\Furkan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\obj\\",
+        "outputPath": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Furkan\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -12,7 +12,6 @@ namespace GameStore.Entities
         public List<GameGenre> GameGenres { get; set; }
         public List<GameDeveloper> GameDevelopers { get; set; }
         public List<GameWriter> GameWriters { get; set; }
-        public List<GamePublishers> GamePublisher { get; set; }
 
     }
 }

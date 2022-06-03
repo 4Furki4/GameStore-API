@@ -22,14 +22,7 @@ namespace GameStore.DbOperations
                         Name = "XCOM 2", Price = 59.99, PublishDate = new DateTime(2016, 02,05)
                     }
                 );
-                if(context.Publishers.Any())
-                    return;
-                context.Publishers.AddRange
-                (
-                    new Publisher{Name = "Rockstar Games"},
-                    new Publisher{Name = "2K"},
-                    new Publisher{Name = "Feral Interactive"}
-                );
+
                 if(context.Developers.Any())
                     return;
                 context.Developers.AddRange
@@ -66,12 +59,7 @@ namespace GameStore.DbOperations
                 context.SaveChanges();
             }
         }
-        static List<GamePublishers> gamePublishers = new List<GamePublishers>
-        {
-            new GamePublishers{GameID = 1, PublisherID = 1},
-            new GamePublishers{GameID = 2, PublisherID = 2},
-            new GamePublishers{GameID = 2, PublisherID = 3}
-        };
+        
         static List<GameDeveloper> gameDevelopers = new List<GameDeveloper>
         {
             new GameDeveloper{GameID = 1, DeveloperID = 1},
