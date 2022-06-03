@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LmdfcvYlEC1pZyfeIAaBa034vqMK2oyIUbm1pQsyskeDSqyBbo+G8jKPHACoxDgfR3ygYy7PpgrJwN7oOIBT/w==",
+  "dgSpecHash": "42GciZh//ZIftgPtAOWr5spE7+fM7TC30pAu8K33Vl6vqKct0xgpzjRihh/vgo3x6hAaV5LY7bXTdfFLUI/IJg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
+  "projectFilePath": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

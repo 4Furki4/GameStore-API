@@ -10,9 +10,9 @@ namespace GameStore.Entities
         public Double Price { get; set; }
         public DateTime PublishDate { get; set; }
         public List<GameGenre> GameGenres { get; set; }
-        // public List<GamePublisher> GamePublishers { get; set; }
         public List<GameDeveloper> GameDevelopers { get; set; }
         public List<GameWriter> GameWriters { get; set; }
+        public List<GamePublishers> GamePublisher { get; set; }
 
     }
 }

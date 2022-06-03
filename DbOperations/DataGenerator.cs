@@ -22,14 +22,14 @@ namespace GameStore.DbOperations
                         Name = "XCOM 2", Price = 59.99, PublishDate = new DateTime(2016, 02,05)
                     }
                 );
-                // if(context.Publishers.Any())
-                //     return;
-                // context.Publishers.AddRange
-                // (
-                //     new Publisher{Name = "Rockstar Games"},
-                //     new Publisher{Name = "2K"},
-                //     new Publisher{Name = "Feral Interactive"}
-                // );
+                if(context.Publishers.Any())
+                    return;
+                context.Publishers.AddRange
+                (
+                    new Publisher{Name = "Rockstar Games"},
+                    new Publisher{Name = "2K"},
+                    new Publisher{Name = "Feral Interactive"}
+                );
                 if(context.Developers.Any())
                     return;
                 context.Developers.AddRange
@@ -60,18 +60,17 @@ namespace GameStore.DbOperations
                     new Writer{Name = "Benjamin Byron Davis"},
                     new Writer{Name = "Scott Wittbecker"}
                 );
-                // context.GamePublishers.AddRange(gamePublishers);
                 context.GameDevelopers.AddRange(gameDevelopers);
                 context.GameGenres.AddRange(gameGenres);
                 context.GameWriters.AddRange(gameWriters);
                 context.SaveChanges();
             }
         }
-        static List<GamePublisher> gamePublishers = new List<GamePublisher>
+        static List<GamePublishers> gamePublishers = new List<GamePublishers>
         {
-            new GamePublisher{GameId = 1, PublishedId = 1},
-            new GamePublisher{GameId = 2, PublishedId = 2},
-            new GamePublisher{GameId = 2, PublishedId = 3}
+            new GamePublishers{GameID = 1, PublisherID = 1},
+            new GamePublishers{GameID = 2, PublisherID = 2},
+            new GamePublishers{GameID = 2, PublisherID = 3}
         };
         static List<GameDeveloper> gameDevelopers = new List<GameDeveloper>
         {
