@@ -2,7 +2,7 @@ using AutoMapper;
 using GameStore.Application.GameOperations.Command.Create;
 using GameStore.Application.GameOperations.Command.Update;
 using GameStore.Application.GameOperations.Query.GetBookDetail;
-using GameStore.Application.GameOperations.Query.GetBooks;
+using GameStore.Application.GameOperations.Query.GetGames;
 using GameStore.Entities;
 
 namespace GameStore.Common
