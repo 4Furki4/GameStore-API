@@ -3,8 +3,8 @@ using FluentValidation;
 using GameStore.Application.GameOperations.Command.Create;
 using GameStore.Application.GameOperations.Command.Delete;
 using GameStore.Application.GameOperations.Command.Update;
-using GameStore.Application.GameOperations.Query.GetGameDetail;
-using GameStore.Application.GameOperations.Query.GetGames;
+using GameStore.Application.GameOperations.Query.GetBookDetail;
+using GameStore.Application.GameOperations.Query.GetBooks;
 using GameStore.DbOperations;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +26,7 @@ namespace GameStore.Controllers
         [HttpGet]
         public List<GameModel> GetGames()
         {
-            GetGameQuery query = new(dbContext, mapper);
+            GetBookQuery query = new(dbContext, mapper);
             var result = query.Handler();
             return result;
         }
@@ -47,9 +47,9 @@ namespace GameStore.Controllers
         [HttpGet("{id}")]
         public IActionResult GetGameById(int id)
         {
-            GetGameDetailQuery query = new(dbContext,mapper);
+            GetBookDetailQuery query = new(dbContext,mapper);
             query.GameID = id;
-            GetGameDetailQueryValidator validations = new();
+            GetBookDetailQueryValidator validations = new();
             validations.ValidateAndThrow(query);
             var result = query.Handler();
             return Ok(result);
