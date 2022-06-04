@@ -7,13 +7,11 @@ namespace GameStore.Application.GameOperations.Command.Create
     public class CreateGameCommand
     {
         private readonly GameStoreDbContext dbContext;
-        private readonly IMapper mapper;
         public CreateGameModel Model { get; set; }
 
-        public CreateGameCommand(GameStoreDbContext dbContext, IMapper mapper)
+        public CreateGameCommand(GameStoreDbContext dbContext)
         {
             this.dbContext = dbContext;
-            this.mapper = mapper;
         }
 
         public void Handler()
@@ -22,9 +20,9 @@ namespace GameStore.Application.GameOperations.Command.Create
             if(gameCheck is not null)
                 throw new InvalidOperationException("Bu oyun zaten mevcut!");
 
-            Game game = new();
+            Game game = new(); // to bind model to game entity, we created an instance.
 
-            game.Name=Model.Name;
+            game.Name=Model.Name; 
             game.Price=Model.Price;
             game.PublishDate=Model.PublishDate;
 
@@ -32,6 +30,7 @@ namespace GameStore.Application.GameOperations.Command.Create
             List<GameDeveloper> gameDevelopers = new List<GameDeveloper>();
             List<GameWriter> gameWriters = new List<GameWriter>();
 
+            //binding genre, developer and writer by using int list given by model
             foreach (var Genre_ID in Model.GameGenres)
                 gameGenres.Add(new GameGenre{GameID=game.ID, GenreID=Genre_ID});
 
@@ -55,7 +54,7 @@ namespace GameStore.Application.GameOperations.Command.Create
         public string Name { get; set; }
         public Double Price { get; set; }
         public DateTime PublishDate { get; set; }
-        public List<int> GameGenres { get; set; }
+        public List<int> GameGenres { get; set; } //existing genre, developer and writers can be added to new game. so we should first add new gamewriters and others.
         public List<int> GameDevelopers { get; set; }
         public List<int> GameWriters { get; set; }
     }

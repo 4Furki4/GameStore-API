@@ -1,6 +1,8 @@
 using AutoMapper;
 using FluentValidation;
 using GameStore.Application.GameOperations.Command.Create;
+using GameStore.Application.GameOperations.Command.Delete;
+using GameStore.Application.GameOperations.Command.Update;
 using GameStore.Application.GameOperations.Query.GetBookDetail;
 using GameStore.Application.GameOperations.Query.GetBooks;
 using GameStore.DbOperations;
@@ -22,7 +24,7 @@ namespace GameStore.Controllers
         }
 
         [HttpGet]
-        public List<GameModel> GetBooks()
+        public List<GameModel> GetGames()
         {
             GetBookQuery query = new(dbContext, mapper);
             var result = query.Handler();
@@ -30,17 +32,20 @@ namespace GameStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateBook(CreateGameModel model)
+        public IActionResult CreateGame(CreateGameModel model)
         {
-            CreateGameCommand command = new (dbContext,mapper);
+            CreateGameCommand command = new (dbContext);
             command.Model=model;
-            // VALIDATIONS
+
+            CreateGameCommandValidator validations = new();  // VALIDATIONS
+            validations.ValidateAndThrow(command);
+
             command.Handler();
             return Ok();
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBookById(int id)
+        public IActionResult GetGameById(int id)
         {
             GetBookDetailQuery query = new(dbContext,mapper);
             query.GameID = id;
@@ -48,6 +53,29 @@ namespace GameStore.Controllers
             validations.ValidateAndThrow(query);
             var result = query.Handler();
             return Ok(result);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateGame(int id, UpdateGameModel model)
+        {
+            UpdateGameCommand command = new(dbContext);
+            UpdateGameCommandValidator validations = new();
+            command.GameID=id;
+            command.Model=model;
+            validations.ValidateAndThrow(command);
+            command.Handler();
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteGame(int id)
+        {
+            DeleteGameCommand command = new(dbContext);
+            DeleteGameCommandValidator validations = new();
+            command.GameID=id;
+            validations.ValidateAndThrow(command);
+            command.Handler();
+            return Ok();
         }
     }
 }

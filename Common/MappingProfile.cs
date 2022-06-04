@@ -1,5 +1,6 @@
 using AutoMapper;
 using GameStore.Application.GameOperations.Command.Create;
+using GameStore.Application.GameOperations.Command.Update;
 using GameStore.Application.GameOperations.Query.GetBookDetail;
 using GameStore.Application.GameOperations.Query.GetBooks;
 using GameStore.Entities;
@@ -28,6 +29,8 @@ namespace GameStore.Common
             // .ForPath(dest=>dest.GameGenres.Select(g=>g.GenreID),opt=>opt.MapFrom(src=>src.GameGenres))
             // .ForPath(dest=>dest.GameDevelopers.Select(g=>g.DeveloperID),opt=>opt.MapFrom(src=>src.GameDevelopers))
             // .ForPath(dest=>dest.GameWriters.Select(g=>g.WriterID),opt=>opt.MapFrom(src=>src.GameWriters))
+
+            CreateMap<UpdateGameModel,Game>();
         }
     }
 }
