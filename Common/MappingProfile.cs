@@ -1,8 +1,8 @@
 using AutoMapper;
 using GameStore.Application.GameOperations.Command.Create;
 using GameStore.Application.GameOperations.Command.Update;
-using GameStore.Application.GameOperations.Query.GetBookDetail;
-using GameStore.Application.GameOperations.Query.GetBooks;
+using GameStore.Application.GameOperations.Query.GetGameDetail;
+using GameStore.Application.GameOperations.Query.GetGames;
 using GameStore.Entities;
 
 namespace GameStore.Common
@@ -11,7 +11,7 @@ namespace GameStore.Common
     {
         public MappingProfile()
         {
-            
+
             CreateMap<Game, GameModel>()
             .ForMember(dest => dest.Developers,opt => opt.MapFrom(src => src.GameDevelopers.Select(n => n.Developer.Name).ToList()))
             .ForMember(dest => dest.Genres,opt => opt.MapFrom(src => src.GameGenres.Select(n=>n.Genre.Name)))
