@@ -39,3 +39,4 @@ C:\Users\Furkan\OneDrive\Masaüstü\Yazılım\Projeler\GameStore\obj\Debug\net6.
 C:\Users\Furkan\OneDrive\Masaüstü\Yazılım\Projeler\GameStore\obj\Debug\net6.0\GameStore.pdb
 C:\Users\Furkan\OneDrive\Masaüstü\Yazılım\Projeler\GameStore\obj\Debug\net6.0\GameStore.genruntimeconfig.cache
 C:\Users\Furkan\OneDrive\Masaüstü\Yazılım\Projeler\GameStore\obj\Debug\net6.0\ref\GameStore.dll
+C:\Users\Furkan\OneDrive\Masaüstü\Yazılım\Projeler\GameStore\bin\Debug\net6.0\Newtonsoft.Json.dll

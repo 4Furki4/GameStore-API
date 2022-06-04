@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {}
+    "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {
+    "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
+        "projectUniqueName": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
         "projectName": "GameStore",
-        "projectPath": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
+        "projectPath": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
         "packagesPath": "C:\\Users\\Furkan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\obj\\",
+        "outputPath": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Furkan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +59,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.0-preview.4.22229.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

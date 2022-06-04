@@ -1,5 +1,7 @@
 using System.Reflection;
 using GameStore.DbOperations;
+using GameStore.Middlewares;
+using GameStore.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<GameStoreDbContext>(opt=>opt.UseInMemoryDatabase(databaseName:"GameStore"));
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddSingleton<ILoggerService,Console_Logger>();
 
 var app = builder.Build();
 
@@ -31,6 +34,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCustomException();
 
 app.MapControllers();
 

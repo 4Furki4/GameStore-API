@@ -2,32 +2,35 @@ using AutoMapper;
 using GameStore.DbOperations;
 using Microsoft.EntityFrameworkCore;
 
-namespace GameStore.Application.GameOperations.Query.GetBooks
+namespace GameStore.Application.GameOperations.Query.GetBookDetail
 {
-    public class GetBookQuery
+    public class GetBookDetailQuery
     {
         private readonly GameStoreDbContext dbContext;
         private readonly IMapper mapper;
-        public GetBookQuery(GameStoreDbContext dbContext, IMapper mapper)
+        public int GameID { get; set; }
+        public GetBookDetailQuery(GameStoreDbContext dbContext, IMapper mapper)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;
         }
-
-        public List<GameModel> Handler()
+        public GameDetailModel Handler()
         {
             var game = dbContext.Games
             .Include(x=>x.GameWriters).ThenInclude(w=>w.Writer)
             .Include(x=>x.GameDevelopers).ThenInclude(x=>x.Developer)
             .Include(x=>x.GameGenres).ThenInclude(x=>x.Genre)
-            .OrderBy(x=>x.ID).ToList();
+            .SingleOrDefault(x=>x.ID==GameID);
+
             if(game is null)
-                throw new InvalidOperationException("Oyun bulunamadı!");
-            var result = mapper.Map<List<GameModel>>(game);
+                throw new InvalidOperationException("Girmiş olduğunuz ID ile eşleşen oyun bulunamadı!");
+
+            var result = mapper.Map<GameDetailModel>(game);
             return result;
         }
     }
-    public class GameModel
+
+    public class GameDetailModel
     {
         public string Name { get; set; }
         public Double Price { get; set; }

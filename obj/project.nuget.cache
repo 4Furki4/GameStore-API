@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LmdfcvYlEC1pZyfeIAaBa034vqMK2oyIUbm1pQsyskeDSqyBbo+G8jKPHACoxDgfR3ygYy7PpgrJwN7oOIBT/w==",
+  "dgSpecHash": "yMR5QvLYK04LmkVcfcf6GxXpxGABQHLX/f+EVw0A8TzlofqGmTOR3Cu9h2P8xQZsSEa+qtHduR3H/ybGZo8XPg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
+  "projectFilePath": "C:\\Users\\Furkan\\OneDrive\\Masaüstü\\Yazılım\\Projeler\\GameStore\\GameStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
@@ -22,6 +22,7 @@
     "C:\\Users\\Furkan\\.nuget\\packages\\microsoft.extensions.options\\7.0.0-preview.4.22229.4\\microsoft.extensions.options.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0-preview.4.22229.4\\microsoft.extensions.primitives.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Furkan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Furkan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
