@@ -48,8 +48,9 @@ namespace GameStore.Controllers
         public IActionResult GetGameById(int id)
         {
             GetGameDetailQuery query = new(dbContext,mapper);
-            query.GameID = id;
             GetGameDetailQueryValidator validations = new();
+
+            query.GameID = id;
             validations.ValidateAndThrow(query);
             var result = query.Handler();
             return Ok(result);
@@ -60,6 +61,7 @@ namespace GameStore.Controllers
         {
             UpdateGameCommand command = new(dbContext);
             UpdateGameCommandValidator validations = new();
+
             command.GameID=id;
             command.Model=model;
             validations.ValidateAndThrow(command);
@@ -72,6 +74,7 @@ namespace GameStore.Controllers
         {
             DeleteGameCommand command = new(dbContext);
             DeleteGameCommandValidator validations = new();
+            
             command.GameID=id;
             validations.ValidateAndThrow(command);
             command.Handler();

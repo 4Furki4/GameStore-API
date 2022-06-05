@@ -9,6 +9,9 @@ using GameStore.Application.GenreOperations.Command.Create;
 using GameStore.Application.DeveloperOperations.Query.Get;
 using GameStore.Application.DeveloperOperations.Query.GetDetail;
 using GameStore.Application.DeveloperOperations.Command.Create;
+using GameStore.Application.WriterOperations.Query.Get;
+using GameStore.Application.WriterOperations.Query.GetDetail;
+using GameStore.Application.WriterOperations.Command.Create;
 
 namespace GameStore.Common
 {
@@ -16,7 +19,7 @@ namespace GameStore.Common
     {
         public MappingProfile()
         {
-
+            // ******************** Game Mappings ********************
             CreateMap<Game, GameModel>()
             .ForMember(dest => dest.Developers,opt => opt.MapFrom(src => src.GameDevelopers.Select(n => n.Developer.Name).ToList()))
             .ForMember(dest => dest.Genres,opt => opt.MapFrom(src => src.GameGenres.Select(n=>n.Genre.Name)))
@@ -29,18 +32,26 @@ namespace GameStore.Common
 
             CreateMap<UpdateGameModel,Game>();
 
+            // ******************** Genre Mappings ********************
             CreateMap<Genre,GenreViewModel>();
 
             CreateMap<Genre,GenreDetailViewModel>();
 
             CreateMap<CreateGenreModel, Genre>();
 
+            // ******************** Developer Mappings ********************
             CreateMap<Developer,DeveloperViewModel>();
 
             CreateMap<Developer,DeveloperDetailViewModel>();
 
             CreateMap<CreateDeveloperModel,Developer>();
-            
+
+            // ******************** Writer Mappings ********************
+            CreateMap<Writer,GetWriterViewModel>();
+
+            CreateMap<Writer,GetWriterDetailViewModel>();
+
+            CreateMap<CreateWriterModel, Writer>();
         }
     }
 }
