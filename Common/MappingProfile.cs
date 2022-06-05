@@ -6,6 +6,9 @@ using GameStore.Application.GenreOperations.Query.GetDetail;
 using GameStore.Entities;
 using GameStore.Application.GenreOperations.Query.Get;
 using GameStore.Application.GenreOperations.Command.Create;
+using GameStore.Application.DeveloperOperations.Query.Get;
+using GameStore.Application.DeveloperOperations.Query.GetDetail;
+using GameStore.Application.DeveloperOperations.Command.Create;
 
 namespace GameStore.Common
 {
@@ -31,6 +34,13 @@ namespace GameStore.Common
             CreateMap<Genre,GenreDetailViewModel>();
 
             CreateMap<CreateGenreModel, Genre>();
+
+            CreateMap<Developer,DeveloperViewModel>();
+
+            CreateMap<Developer,DeveloperDetailViewModel>();
+
+            CreateMap<CreateDeveloperModel,Developer>();
+            
         }
     }
 }
